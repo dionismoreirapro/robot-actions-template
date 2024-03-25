@@ -31,4 +31,6 @@ jobs:
         pip install -r requirements.txt
     - name: Browser init
       run: rfbrowser init
-
+    - name: Run E2E tests
+     # run: robot -d ./logs -i smoke tests # adicionando parametro para rodar somente teste com a alguma tag
+      run: robot -d ./logs ./tests
